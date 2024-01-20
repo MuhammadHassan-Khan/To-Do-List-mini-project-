@@ -1,0 +1,142 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+
+<body> -->
+    <!-- <button id="click" onclick="fun()"> click me </button> -->
+
+    <!-- <img onmouseover="src='https:encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlBLORxmuwMNWRDP-AHNGnLl9fO-vaHpr1iA&usqp=CAU'" id="img"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8zpren-Tv0caUisH8il4D0L1j3D5oLHNfFA&usqp=CAU" alt=""> -->
+
+    <!-- <img id="changing" onclick="src='https:encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlBLORxmuwMNWRDP-AHNGnLl9fO-vaHpr1iA&usqp=CAU'" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8zpren-Tv0caUisH8il4D0L1j3D5oLHNfFA&usqp=CAU" alt=""> -->
+    <!-- <P id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae natus accusantium ipsam, ipsa reiciendis ipsum
+        similique atque nemo sed error. Praesentium, Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, distinctio aut eum nesciunt alias unde eius perferendis nam quod ipsa, consectetur officiis. Animi, hic voluptatibus veniam molestiae voluptatum quibusdam deserunt. qui illum. Quo nesciunt odit molestiae, porro fugit aliquid!</P>
+
+        <button id="btn" style="display: none;">Follow Me</button>
+        
+    <script>
+
+        var text = document.getElementById("para")
+        var btn = document.getElementById("btn")
+
+
+        if{} -->
+<!-- 
+
+        // function fun() {
+        //     var get = document.getElementById("click")
+        //     alert("Hello")
+        // } -->
+<!-- 
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+#task-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div id="task-container">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="task-list"></ul>
+        </div>
+    </div>
+   <script>
+    const taskInput = document.getElementById('task-input');
+const taskList = document.getElementById('task-list');
+
+function addTask() {
+    const taskText = taskInput.value.trim();
+
+    if (taskText !== '') {
+        const taskItem = document.createElement('li');
+        taskItem.innerHTML = `
+            <span>${taskText}</span>
+            <button onclick="completeTask(this)">Complete</button>
+            <button onclick="deleteTask(this)">Delete</button>
+        `;
+        taskList.appendChild(taskItem);
+        taskInput.value = '';
+    }
+}
+
+function completeTask(button) {
+    const taskItem = button.parentNode;
+    taskItem.classList.toggle('completed');
+}
+
+function deleteTask(button) {
+    const taskItem = button.parentNode;
+    taskList    (taskItem);
+}
+
+   </script>
+</body>
+</html>
